@@ -6,7 +6,9 @@ starttime = datetime.now()                      # record start time for time pro
 
 sum = sum([i**i for i in range(1, 1001)])
 stringRepresentation = str(sum)
-lastTenDigits = stringRepresentation[:10]
+endIndex = len(stringRepresentation)
+startIndex = endIndex - 10
+lastTenDigits = stringRepresentation[startIndex:endIndex]
 print lastTenDigits
 
 endtime = datetime.now()                        # record end time for time profiling
